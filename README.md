@@ -1,6 +1,6 @@
 # Hastebin-API
 
-API for https://github.com/urento/Hastebin
+Lightweight API for https://github.com/urento/Hastebin
 
 # createHaste
 
