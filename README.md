@@ -2,8 +2,6 @@
 
 API for https://github.com/urento/Hastebin
 
-# Functions
-
 # createHaste
 
 - Send a Request to the API and Create a new haste
