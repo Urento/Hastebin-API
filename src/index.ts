@@ -14,11 +14,10 @@ const generateId = (length: number) => {
  * Send a Request to the API and Create a new haste
  * @param hostname web address from the api server
  * @param content content that should be displayed in the haste
- * @param id if null it will be set automatically
  * @returns response from server
  */
-export const createHaste = async (hostname: string, content: string, id?: string) => {
-  if (id === null) id = generateId(8);
+export const createHaste = async (hostname: string, content: string) => {
+  const id = generateId(8);
 
   const jsonObject = {
     id,
