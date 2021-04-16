@@ -1,6 +1,6 @@
 # Hastebin-API
 
-Lightweight API for https://github.com/urento/Hastebin
+Lightweight Typescript API for https://github.com/urento/Hastebin
 
 # createHaste
 
