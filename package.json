@@ -1,6 +1,6 @@
 {
   "name": "hastebin-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "API for github.com/urento/Hastebin",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
