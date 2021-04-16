@@ -45,18 +45,3 @@ export const getHaste = async (hostname: string, id: string) => {
     .catch((err) => (res = err));
   return res;
 };
-
-/**
- * Delete Haste
- * @param hostname  web address from the api server
- * @param id id from the haste
- * @returns json object
- */
-export const deleteHaste = async (hostname: string, id: string) => {
-  let res: any = '';
-
-  await fetch(hostname + '/haste/' + id, { method: 'DELETE' })
-    .then((response) => (res = response))
-    .catch((err) => (res = err));
-  return res;
-};
