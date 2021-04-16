@@ -13,22 +13,20 @@ const generateId = (length: number) => {
 /**
  * Send a Request to the API and Create a new haste
  * @param hostname web address from the api server
- * @param content content that should be displayed in the haste
+ * @param text content that should be displayed in the haste
  * @returns response from server
  */
-export const createHaste = async (hostname: string, content: string) => {
-  const id = generateId(8);
+export const createHaste = async (hostname: string, text: string) => {
+  const generatedId: string = generateId(8);
 
-  const jsonObject = {
-    id,
-    content,
-  };
   let res: any = '';
 
-  await fetch(hostname + '/haste', { method: 'POST', body: JSON.stringify(jsonObject) })
-    .then((response) => (res = response))
-    .catch((err) => (res = err));
-  return res;
+  const response = await fetch(hostname + '/haste', {
+    method: 'post',
+    body: JSON.stringify({ id: generatedId, content: text }),
+    headers: { 'Content-Type': 'application/json' },
+  }).catch((err) => (res = err));
+  return response.json();
 };
 
 /**
@@ -40,8 +38,9 @@ export const createHaste = async (hostname: string, content: string) => {
 export const getHaste = async (hostname: string, id: string) => {
   let res: any = '';
 
-  await fetch(hostname + '/haste/' + id)
-    .then((response) => (res = response))
-    .catch((err) => (res = err));
-  return res;
+  const response = await fetch(hostname + '/haste/' + id, {
+    method: 'get',
+    headers: { 'Content-Type': 'application/json' },
+  }).catch((err) => (res = err));
+  return response.json();
 };
