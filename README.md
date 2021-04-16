@@ -19,4 +19,3 @@ Lightweight Typescript API for https://github.com/urento/Hastebin
 # Todo
 
 - Add Constructor or something to make functions get rid of setting the hostname every time
-- Add Tests
